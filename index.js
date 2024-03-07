@@ -10,6 +10,13 @@ const orderRoute = require("./routes/order");
 dotenv.config();
 
 
+const cors = require('cors');
+app.use(cors());
+
+
+
+
+
 mongoose.connect(process.env.MONGO_URI)
 .then(()=>console.log("db connection successfull"))
 .catch((err)=>{console.log(err);
